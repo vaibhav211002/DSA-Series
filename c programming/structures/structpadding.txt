@@ -1,0 +1,15 @@
+// Online C compiler to run C program online
+#include <stdio.h>
+#pragma pack(1) //here cpu cycles get wasted and output is 6 in this case.
+struct abc{
+    char a; //1 bytes
+    char b; //1 bytes
+    int c; //4 bytes
+}var;
+int main() 
+{
+    printf("%d",sizeof(var));
+
+    return 0;
+}
+//output = 6

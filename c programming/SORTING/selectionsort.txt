@@ -1,0 +1,28 @@
+// Online C compiler to run C program online
+#include <stdio.h>
+
+int main() 
+{
+    int i,j,a,min;
+    int aw[5]={1,4,3,2,5};
+    for(i=0;i<4;i++)
+    //rounds from 1 ----> n-1
+    {
+        min=i;
+        for (j=i+1;j<5;j++)
+        {
+            if(aw[min]>aw[j])
+            {
+                min=j;
+
+            }
+        }
+        a=aw[min];
+        aw[min]=aw[i];
+        aw[i]=a;
+    }
+    for(i=0;i<5;i++)
+    {
+        printf("%d ",aw[i]);
+    }
+}

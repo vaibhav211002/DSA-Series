@@ -1,0 +1,27 @@
+// Online C compiler to run C program online
+#include <stdio.h>
+
+int main() 
+{
+    int j,k;
+    int arr[5]={1,2,3,4,5};
+    int ar[3]={2,4,5};
+    int s=0,e=5,i=0;
+    for(j=0;j<5;j++)
+    {
+        if(ar[0]==arr[j])
+        break;
+    }
+    for(i=0;i<j;i++)
+    {
+        for(k=1;k<3;k++)
+        {
+            if(ar[k]==arr[i])
+            {
+                printf("ar is not a subsequence of arr");
+                return ;
+            }
+        }
+    }
+    printf("ar is a subsequence of arr");
+}

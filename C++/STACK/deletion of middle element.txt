@@ -1,0 +1,56 @@
+// Online C++ compiler to run C++ program online
+#include <iostream>
+#include <stack>
+//#include <string>
+using namespace std;
+
+
+void solve(stack<int>&s,int c,int n)
+{
+    //base case 
+    if(c==n/2)
+    {
+        s.pop();
+        return ;
+    }
+    
+    int num=s.top();
+    s.pop();
+    
+    //recursive call
+    solve(s,c+1,n);
+    
+    
+    s.push(num);
+}
+
+
+
+int main() 
+{
+    int i,c=0,n=0;
+    int str[5]={1,2,3,4,5};
+    stack<int> s;
+    for(i=0;i<5;i++)
+    {
+        s.push(str[i]);
+        n++;
+    }
+
+    solve(s,c,n);
+         
+    cout<<"after solver"<<endl;
+    cout<<s.top()<<" ";
+    s.pop();
+    cout<<s.top()<<" ";
+    s.pop();
+    cout<<s.top()<<" ";
+    s.pop();
+    cout<<s.top()<<" ";
+    s.pop();
+
+
+    
+    
+    return 0;
+}

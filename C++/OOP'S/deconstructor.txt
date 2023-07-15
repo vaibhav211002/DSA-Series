@@ -1,0 +1,84 @@
+// Online C++ compiler to run C++ program online
+#include <iostream>
+#include <cstring>
+using namespace std;
+
+
+
+
+
+class hero {
+     //public name is used here to define the structure names 
+    //if nothing mentoined it is private by default
+    private :
+    int cls;
+    int mls;
+    public:
+    int ho;
+    char *name;
+    
+    
+  
+    hero()
+    {
+       cout<<"address of this 2 = "<<this<<endl;
+       name= new char[100];
+
+        cout<<"constructor called"<<endl;
+    }
+    
+   
+    ~hero()
+    {
+        cout<<" destructor hoon yaar"<<endl;
+    }
+    
+};
+
+
+int main() 
+{
+    //deconstructor -------
+    //static 
+    hero a;
+    
+    //dynamically 
+    
+    hero *b = new hero;
+    delete b;      //here destsructor is called manually
+    
+//     /tmp/fwTN88Tssd.o
+// address of this 2 = 0x7ffc8ca58400
+// constructor called
+// address of this 2 = 0x5603f4a29330
+// constructor called
+//  destructor hoon yaar
+
+
+
+//after manually 
+// /tmp/fwTN88Tssd.o
+// address of this 2 = 0x7ffe542b5270
+// constructor called
+// address of this 2 = 0x5638d635c330
+// constructor called
+//  destructor hoon yaar
+//  destructor hoon yaar
+
+
+
+// destructor automatic - static 
+// destructor mannual - dynamic
+    
+    
+    
+    
+    
+    
+
+    
+    
+
+
+    return 0;
+}

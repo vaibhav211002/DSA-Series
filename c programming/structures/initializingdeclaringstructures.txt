@@ -1,0 +1,13 @@
+// Online C compiler to run C program online
+#include <stdio.h>
+typedef struct abc{
+    int x;
+    int y;
+    int z;
+}alpha;
+int main()
+{
+    struct abc a={.y=10,.x=30,.z=87};
+    printf(" %d %d %d ",a.x,a.y,a.z);
+    return 0;
+}

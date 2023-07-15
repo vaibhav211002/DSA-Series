@@ -1,0 +1,76 @@
+// Online C++ compiler to run C++ program online
+#include <iostream>
+using namespace std;
+
+
+
+class hero {
+     //public name is used here to define the structure names 
+    //if nothing mentoined it is private by default
+    private :
+    char name;
+    int cls;
+    public:
+    int ho;
+    
+    //if private is there then it is not operable under the main class 
+    // private objects can be used under the class only 
+    
+    char getname()
+    {
+        return name;
+    }
+    
+    char setname(char h)
+    {
+        name=h;
+    }
+    
+    int getcls()
+    {
+        return cls;
+    }
+    
+    char setcls(int h)
+    {
+        cls=h;
+    }
+};
+
+
+int main() 
+{
+    hero ramesh;
+     
+     
+     
+     // for static allocation 
+    cout<<"name = "<< ramesh.getname() <<endl;
+    
+    ramesh.setname('s');
+    ramesh.setcls(1);
+    ramesh.ho=2;  //should not be used as ramesh.ho(5)--> function error will come so its best to use  as showen
+    
+    
+    //ramesh.name='v';  // cant be done because name is private
+
+    cout<<"Name = " <<ramesh.getname()<<endl;
+    cout<<"cls = "<< ramesh.getcls() <<endl;
+    cout<<"ho = "<<ramesh.ho<<endl;
+    
+    
+    // for dynamic allocation 
+    hero *b = new hero;
+    
+    // allocation 
+    cout<<"name = "<< (*b).getname() <<endl;
+
+    (*b).setname('d');
+    (*b).setcls(1);
+    (*b).ho=2;
+    cout<<"Name = " <<(*b).getname()<<endl;
+    cout<<"cls = "<< (*b).getcls() <<endl;
+    cout<<"ho = "<<(*b).ho<<endl;
+
+    return 0;
+}

@@ -1,0 +1,25 @@
+// Online C compiler to run C program online
+#include <stdio.h>
+
+char len(char a[])
+{
+    int i,c=0;
+    for(i=0;a[i]!='\0';i++)
+    {
+        c++;
+    }
+    return c;
+}
+int main() 
+{
+    int i;
+    char a[10];
+    gets(a);
+    //a[3]='\0';
+   /* for(i=0;i<5;i++)
+    {
+        printf("%s ",a[i]);
+    }*/
+    printf("lenght %d ", len(a));
+    
+}

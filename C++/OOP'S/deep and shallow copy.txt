@@ -1,0 +1,157 @@
+// Online C++ compiler to run C++ program online
+#include <iostream>
+#include <cstring>
+using namespace std;
+
+
+
+class hero {
+     //public name is used here to define the structure names 
+    //if nothing mentoined it is private by default
+    private :
+    int cls;
+    int mls;
+    public:
+    int ho;
+    char *name;
+    
+    
+  
+    hero()
+    {
+       cout<<"address of this 2 = "<<this<<endl;
+       name= new char[100];
+
+        cout<<"constructor called"<<endl;
+    }
+    
+    hero(int cls,int mls)
+    {
+        cout<<"address of this = "<<this<<endl;
+        this ->cls=cls;
+        this ->mls=mls;
+    }
+    
+    //copy constructor 
+    
+    hero(hero& temp)      //deep copy
+    {                    //when a user defined constructor is used then the  changes made are made only one not both 
+        char *ch= new char[strlen(temp.name)+1];
+        strcpy(ch,temp.name);
+        this->name=ch;
+        cout<<"the made copy constructor"<<endl;
+        this ->cls=temp.cls;
+        this ->mls=temp.mls;
+    }
+    void print()
+    {
+        cout<<endl;
+        cout<<"name :"<<this->name<<endl;
+        cout<<"mls :"<<this->mls<<endl;
+        cout<<"cls :"<<this->cls<<endl;
+    }
+    //if private is there then it is not operable under the main class 
+    // private objects can be used under the class only 
+    
+
+    
+
+    
+    int getcls()
+    {
+        return cls;
+    }
+    
+    char setcls(int h)
+    {
+        cls=h;
+    }
+    
+    int getmls()
+    {
+        return mls;
+    }
+    
+    char setmls(int h)
+    {
+        mls=h;
+    }
+    
+    void setname(char name[])
+    {
+        strcpy(this->name,name);
+    }
+};
+
+
+int main() 
+{
+    
+    //copy constructor
+    hero s;
+    s.setmls(1);
+    s.setcls(2);
+    
+    char name[7]="babber";
+    s.setname(name);
+    hero r(s);                   //default uses shallow copy
+                                 //here the default constructor is used so shallow is used
+
+    s.print();
+    r.print();
+    
+    r.name[0]='o';
+    
+    cout<<"after making changes"<<endl;
+    s.print();
+    r.print();
+    
+    cout<<endl;
+    
+    //assignment operator
+    cout<<"using assignment operator"<<endl;
+    cout<<endl;
+    
+    s=r;
+    s.print();
+    r.print();
+    
+
+// output - shallow copy
+// name :babber
+// mls :1
+// cls :2
+// name :babber
+// mls :1
+// cls :2
+// after making changes
+// name :oabber
+// mls :1
+// cls :2
+// name :oabber
+// mls :1
+// cls :2
+
+//output -deep copy
+// name :babber
+// mls :1
+// cls :2
+
+// name :babber
+// mls :1
+// cls :2
+// after making changes
+// name :babber
+// mls :1
+// cls :2
+
+// name :oabber
+// mls :1
+// cls :2
+
+    
+    
+
+
+    return 0;
+}

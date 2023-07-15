@@ -1,0 +1,21 @@
+{
+	"folders": [
+		{
+			"path": ".."
+		},
+		{
+			"path": "../../QUESTIONS-FAANG"
+		}
+	],
+	"settings": {
+		"files.associations": {
+			"deque": "cpp",
+			"list": "cpp",
+			"queue": "cpp",
+			"span": "cpp",
+			"vector": "cpp",
+			"xstring": "cpp",
+			"xutility": "cpp"
+		}
+	}
+}

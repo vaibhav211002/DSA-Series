@@ -1,0 +1,24 @@
+// Online C compiler to run C program online
+#include <stdio.h>
+struct{
+    char *engine;
+    char name;
+    int fuel_tank_cap;
+} car1,car2;
+
+
+int main() 
+{
+    car1.engine="r12";
+    car2.engine="r13";
+    car1.fuel_tank_cap=3;
+    car2.fuel_tank_cap=4;
+
+    printf("%s\n",car1.engine);
+    printf("%s\n",car2.engine);
+    printf("%d\n",car1.fuel_tank_cap);
+    printf("%d",car2.fuel_tank_cap);
+
+    
+    return 0;
+}

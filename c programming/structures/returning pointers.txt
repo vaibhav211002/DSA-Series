@@ -1,0 +1,24 @@
+// Online C compiler to run C program online
+#include <stdio.h>
+int *findmid(int a[],int si)
+{
+    return &a[si/2]; //gets the address of the element
+}
+
+int main() 
+{
+    int a[5]={1,2,3,4,5};
+    int si=5;
+    int *mid=findmid(a,si);
+    printf("value of *mid : %d",*mid);
+    //printf("value o mid : %d",mid);
+    return 0;
+    // never try to return the value of automatic/local  variable
+    /*int *fun()
+    {
+        int i=10;
+        return &i;
+    }
+    /* int *P=fun()
+    printf("value of *P: %d"); */
+}

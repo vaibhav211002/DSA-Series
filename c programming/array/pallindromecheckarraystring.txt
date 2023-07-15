@@ -1,0 +1,45 @@
+// Online C compiler to run C program online
+#include <stdio.h>
+int checkpallindrome(char a[],int b)
+{
+    int s=0;
+    int e=b-1;
+    while(s<=e)
+    {
+        if(a[s]!=a[e])
+        {
+            return 0;
+        }
+        else
+        {
+            s++;
+            e--;
+        }
+    }
+    return 1;
+}
+char len(char a[])
+{
+    int i,c=0;
+    for(i=0;a[i]!='\0';i++)
+    {
+        c++;
+    }
+    return c;
+}
+int main() 
+{
+    int i,u,t;
+    char a[10];
+    gets(a);
+    t=len(a);
+    u=checkpallindrome(a,t);
+    if(u==1)
+    {
+        printf("string is pallindrome");
+    }
+    else
+    {
+        printf("string is not pallindrome");
+    }
+}

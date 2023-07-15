@@ -1,0 +1,53 @@
+// Online C++ compiler to run C++ program online
+#include <iostream>
+using namespace std;
+
+class human {
+    
+    public :
+    int h;
+    int w;
+    private :
+    int a;
+                            //age is private so cant be accessed in the //child class using th epublic domain in //the mentioned table  
+    public : 
+    int geta()
+    {
+        return this->a;
+    }
+    int setw(int w)
+    {
+        this->w=w;
+    }
+};
+
+
+class male: protected human    //inherited property by parent class with help of class child : access modifiers parent class 
+{
+    public:
+    string color;              //hrre child is a public class 
+    
+    void sleep()
+    {
+        cout<<"msle sleeping"<<endl;
+    }
+};
+
+
+
+
+int main()
+{
+    
+    male m1;
+    m1.h=12;              
+    //ex1----------//here the parrent class is public so the
+    //child class on being public it is accessing the data member .
+    
+    
+    //ex2----------//here the parent class was public but the child class was protected so the data is inacceessible 
+    cout<<m1.h<<endl;
+    
+
+
+}

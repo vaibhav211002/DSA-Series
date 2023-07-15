@@ -1,0 +1,75 @@
+// Online C compiler to run C program online
+#include <stdio.h>
+int main() 
+{
+    int m,n,j,k,l,o;
+    int i=0;
+    printf("enter no. of rows : ");
+    scanf("%d",&n);
+    printf("enter no. of cols : ");
+    scanf("%d",&m);
+    int arr[n][m];
+    int tr[n][m];
+    int re[n][m];
+    //matrix 1 making 
+    printf("enter the values of matrix-1\n\n");
+    for(i=0;i<n;i++)
+    {
+        for(j=0;j<m;j++)
+        {
+            printf("input [%d][%d] element : ",i+1,j+1);
+            scanf("%d",&k);
+            arr[i][j]=k;
+        }
+    }
+    for(i=0;i<n;i++)
+    {
+        for(j=0;j<m;j++)
+        {
+            printf("%d ",arr[i][j]);
+        }
+        printf("\n");
+    }
+    //matrix 2 making 
+    printf("enter the values of matrix-2\n\n");
+    for(i=0;i<n;i++)
+    {
+        for(j=0;j<m;j++)
+        {
+            printf("input [%d][%d] element : ",i+1,j+1);
+            scanf("%d",&k);
+            tr[i][j]=k;
+        }
+    }
+    for(i=0;i<n;i++)
+    {
+        for(j=0;j<m;j++)
+        {
+            printf("%d ",arr[i][j]);
+        }
+        printf("\n");
+    }
+    for(i=0;i<n;i++)
+    {
+        for(j=0;j<m;j++)
+        {
+            re[i][j]=0;
+            for(k=0;k<n;k++)
+            {
+                o=tr[i][k]*arr[k][j];
+                re[i][j]=re[i][j]+o;
+            }
+            
+        }
+    }
+    printf(" values of matrix-1 * matrix 2\n\n");
+    for(i=0;i<n;i++)
+    {
+        for(j=0;j<m;j++)
+        {
+            printf("%d ",re[i][j]);
+        }
+        printf("\n");
+    }
+    
+}

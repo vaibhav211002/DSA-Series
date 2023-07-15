@@ -1,0 +1,39 @@
+#include <iostream>
+using namespace std;
+
+class a{
+   public : 
+   void abc()
+    {
+        cout<<"function of a"<<endl;
+    }
+};
+
+class b{
+    
+   public:
+   void abc()
+    {
+        cout<<"function of b"<<endl;
+    }
+};
+
+class c: public a,public b{
+    
+
+};
+
+int main()
+{
+    c k;
+    
+
+    // here is the function ambiguity is happening //because of which //the  functions are confusead which to call
+    
+    // so 
+    
+     k.a::abc();
+     k.b::abc();
+
+    
+}

@@ -1,0 +1,39 @@
+#include <stdio.h>
+// typdef defined the new value of definition
+typedef struct empl{
+    char *name;
+    int age;
+    int salary;
+}empl;
+//we declared the main value variable
+int manager()
+{
+    struct empl manager;
+    
+    manager.age=26;
+    if(manager.age>30)
+    {
+        manager.salary=56778;
+    }
+    else
+    {
+        manager.salary=98765;
+    }
+    return manager.salary;
+}
+
+
+int main()
+{
+    //empl is like a shortcut for declaring the main value
+    empl emp1,emp2;
+    //struct employee can be declared in different line with the main function without mentoning it in the main line .
+    printf("enter the salary employee 1 : ");
+    scanf("%d",&emp1.salary);
+    printf("enter the salary employee 2 : ");
+    scanf("%d",&emp2.salary);
+    printf("enter the salary employee 1 :%d ",emp1.salary);
+    printf("enter the salary employee 2 :%d ",emp2.salary);
+    printf("salary of manager is %d ",manager());
+    return 0;
+}

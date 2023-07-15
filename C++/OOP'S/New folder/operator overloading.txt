@@ -1,0 +1,83 @@
+#include <bits/stdc++.h>
+using namespace std;
+class dis {
+    int feet;
+    int inches;
+
+    public : 
+        
+
+        dis()
+        {
+            feet =0;
+            inches=0;
+        }
+        dis(int x,int y)
+        {
+            feet=x;
+            inches=y;
+        }
+
+
+        display()
+        {
+            cout<<"FEET : "<< feet <<endl;
+            cout<<"INCHES : "<< inches<<endl;
+        }
+
+        dis operator + (dis &d1)
+        {
+            dis temp;
+
+            temp.feet=this->feet*d1.feet;
+            temp.inches=this->inches*d1.inches;
+            return temp;
+
+        }
+        dis operator = (dis &d)
+        {
+
+            feet=d.feet;
+            inches=d.inches;
+
+        }
+};
+
+
+int main()
+{
+    dis d1(6,9);
+    dis d2(98,3);
+    dis d3;
+
+    cout<<"paramaterized constructor d1 "<<endl;
+    d1.display();
+    cout<<endl;
+    cout<<"paramaterized constructor d2 "<<endl;
+    d2.display();
+    cout<<endl;
+    cout<<"default constructor "<<endl;
+    d3.display();
+    cout<<endl;
+
+
+    d3=d1;
+    //d3=d2;
+
+
+    cout<<"using operator overloading d3=d2"<<endl;
+    d3.display();
+    cout<<endl;
+
+    cout<<"using operator overloading d2=d1"<<endl;
+    d2.display();
+    cout<<endl;
+
+
+
+    dis d4=d1+d2;
+    cout<<"addition of objects"<<endl;
+    d4.display();
+    cout<<endl;
+
+}

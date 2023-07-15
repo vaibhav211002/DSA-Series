@@ -1,0 +1,15 @@
+-------------------------------------------
+CAR NUMBER : UP69
+CAR NAME : BMW
+IMAGE LINK : maa
+CAR OFFERED PRICE : 200000000
+-------------------------------------------
+CAR NUMBER : UP98
+CAR NAME : BMW
+IMAGE LINK : 34
+CAR OFFERED PRICE : 4
+-------------------------------------------
+CAR NUMBER : UP32IU8970
+CAR NAME : MERCEDES 
+IMAGE LINK : UIOOE
+CAR OFFERED PRICE : 500000

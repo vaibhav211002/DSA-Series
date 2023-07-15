@@ -1,0 +1,97 @@
+// Online C compiler to run C program online
+#include <stdio.h>
+//declaring pointers
+// data_type (type of object)----> 
+int main() {
+    
+    int x=5;
+    int *ptr=&x;
+    int *t;
+    printf("address of ptr : %d \n",ptr);
+    printf("value of ptr : %d \n",*ptr);
+    printf("address of ptr : %d \n",ptr);
+    printf("address of ptr : %d \n",&x);
+    printf("address of t : %d \n",&*t);
+
+    
+    //address of ptr : 975213740 
+    //value of ptr : 5 
+    //address of ptr : 975213740 
+    //address of ptr : 975213740 
+    int i=10;
+    int *p,*q;
+    p=&i;
+    q=p;  
+    printf("content of *p : %d \n",*p);
+    printf("content of *q :  %d \n",*q);
+    printf("content of p : %d \n",p);
+    printf("content of q : %d \n",q);
+    printf("content of i : %d \n",i);
+    printf("content of &i : %d \n",&i);
+    
+    //content of *p : 10 
+    //content of *q :  10 
+    //content of p : 1282551252 
+    //content of q : 1282551252 
+    //content of i : 10 
+    //content of &i : 1282551252 
+    
+    i=10;
+    int j=20;
+    int *a,*b;
+    a=&i; 
+    b=&j;
+    //q=p;  
+    printf("content of *a : %d \n",*a);
+    printf("content of *b :  %d \n",*b);
+    printf("content of a : %d \n",a);
+    printf("content of b : %d \n",b);
+    printf("content of &i : %d \n",&i);
+    printf("content of &j : %d \n",&j);
+    
+    //content of *a : 10 
+    /*content of *b :  20 
+    content of a : 34077104 
+    content of b : 34077108 
+    content of &i : 34077104 
+    content of &j : 34077108 */
+
+
+
+     int u =1;
+     int *k,*o;
+     *k=&u;
+     o=k;
+     *o=5;
+     
+     printf("value of &u : %d \n",&u);
+     printf("value of &*k : %d \n",&*k);
+     printf("value of *k : %d \n",*k);
+     printf("value of &o : %d \n",&o);
+     printf("value of *o : %d \n",*o);
+     printf("value of &o : %d \n",&o);
+     
+     
+     /* value of &u : -910996156 
+    value of &*k : -910995888 
+    value of *k : 5 
+    value of &o : -910996152 
+    value of *o : 5 
+    value of &o : -910996152 
+    value of k : 1673533264 
+    value of o : 1673533264  */
+}
+    
+
+
+
+
+    
+
+
+
+    
+
+
+    return 0;
+}

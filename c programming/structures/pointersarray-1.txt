@@ -1,0 +1,34 @@
+// Online C compiler to run C program online
+#include <stdio.h>
+void print(int *p)
+{
+    printf("%d",*p);
+}
+void update(int *p)
+{
+    *p++;
+    // pointer p should be updated
+}
+int getsum(int *arr,int n)
+// the *arr is same as arr[]
+{
+    int v = sizeof(arr);
+    printf("size : %d \n",v);
+    int sum=0;
+    for(int i=0;i<n;i++)
+    {
+        sum+=arr[i];
+    }
+    return sum;
+}
+
+int main() 
+{
+    
+    int arr[6]={1,2,3,4,5,6};
+    
+    printf("sum is :  %d ",getsum(arr+5,1));
+    
+    //sum fof numbers of array of a part in the array 
+    
+} 

@@ -1,0 +1,23 @@
+#include <iostream>
+using namespace std;
+
+class a{
+   public : 
+   void abc()
+    {
+        cout<<"hello 1 "<<endl;
+    }
+   void abc(string name)
+    {                                   //either change the name or argument of the function and also the return type changes are not valid..............
+        cout<<"hello 2 "<<endl;
+    }
+};
+
+
+
+int main()
+{
+    a obj;
+    obj.abc();
+    
+}

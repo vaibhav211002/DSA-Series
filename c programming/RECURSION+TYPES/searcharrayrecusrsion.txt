@@ -1,0 +1,46 @@
+// Online C compiler to run C program online
+#include <stdio.h>
+
+int print(int arr[],int siz)
+{
+      int i;
+      printf(" size is %d \n",siz);
+      for(i=0;i<siz;i++)
+      {
+        printf("%d",arr[i]);    
+      }
+      printf("\n");
+}
+int sea(int arr[],int siz,int k) 
+{
+    print(arr,siz);
+    if(siz==0)
+    {
+        return 0;
+    }
+    if(arr[0]==k)
+    {
+          return 1;
+    }
+    else 
+    {
+          int rem=sea(arr+1,siz-1,k);
+          return rem;
+    }
+}
+int main()
+{
+    int t;
+    int arr[5]={1,2,3,4,5};
+    int siz=5;
+    int k=4;
+    t=sea(arr,siz,k);
+    if(t)
+    {
+          printf("present");
+    }
+    else
+    {
+          printf("false");
+    }
+}

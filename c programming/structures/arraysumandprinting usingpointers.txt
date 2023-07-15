@@ -1,0 +1,41 @@
+// Online C compiler to run C program online
+#include <stdio.h>
+
+int main() 
+{
+    int i;
+    int a[6]={1,2,3,4,5,6};
+    *a=10;
+    printf("value of i=0 : %d \n",a[0]);
+    *(a+4)=56;
+    printf("value of i=4 : %d \n",a[4]);
+    int sum=0 ,*p;
+    //here a=&a[0]--------- 
+    for(p=a;p<=a+5;p++)
+    {
+        sum+=*p;
+    }
+    printf("sum : %d \n",sum);
+    for(i=0;i<*(a+5);i++)
+    {
+        printf("%d  ",*(a+i));
+    }
+    int k[5]={1,2,3,4,5,6};
+    int *h=k;
+    printf("%d",*(h+2));
+    
+
+    // 3 <--- output
+
+    /* value of i=0 : 10 
+    value of i=4 : 56 
+    sum : 81 
+    10  2  3  4  56  6 */
+    
+    
+    
+    
+    
+
+
+}

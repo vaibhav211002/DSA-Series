@@ -1,0 +1,22 @@
+// Online C compiler to run C program online
+#include <stdio.h>
+//pointer to structure as an arguement 
+struct point {
+    int x;
+    int y;
+};
+
+
+void print(struct point *ptr)
+{
+    printf("%d %d\n",ptr->x,ptr->y);
+}
+
+int main() 
+{
+    struct point p1 ={21,23};
+    struct point p2 ={43,65};
+    print(&p1);
+    print(&p2);
+    return 0;
+}

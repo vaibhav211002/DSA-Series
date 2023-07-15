@@ -1,0 +1,18 @@
+{
+	"folders": [
+		{
+			"path": "../../DSA SPECIFIC UDEMY"
+		},
+		{
+			"path": "../../Practice"
+		},
+		{
+			"path": ".."
+		}
+	],
+	"settings": {
+		"files.associations": {
+			"iostream": "cpp"
+		}
+	}
+}

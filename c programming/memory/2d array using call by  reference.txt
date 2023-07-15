@@ -1,0 +1,47 @@
+// Online C++ compiler to run C++ program online
+#include <iostream>
+using namespace std;
+// creating 2d array using heap memory 
+int main() 
+{
+    //creating 2d array
+    int n,i;
+    cout<< " enter the value :  "<< endl;
+    cin>>n;
+    int** ar=new int *[n];
+    for(int i=0;i<n;i++)
+    {
+        ar[i]=new int[n];
+        
+    }
+    
+    //taking input in the 2d array
+    
+    for( i=0;i<n;i++)
+    {
+        for(int j=0;j<n;j++)
+        {
+            cin>>ar[i][j];
+        }
+    }
+    
+    
+    //taking output
+    for(int i=0;i<n;i++)
+    {
+        for(int j=0;j<n;j++)
+        {
+            cout<<ar[i][j]<<" ";
+        }cout<< endl;
+    }
+    
+    /tmp/4BA5Qzhte3.o
+    enter the value :  
+    3
+    1 2 3 4 5 6 7 8 9
+    1 2 3 
+    4 5 6 
+    7 8 9 
+
+
+}

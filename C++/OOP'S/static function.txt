@@ -1,0 +1,67 @@
+// Online C++ compiler to run C++ program online
+#include <iostream>
+#include <cstring>
+using namespace std;
+
+
+
+
+
+class hero {
+     //public name is used here to define the structure names 
+    //if nothing mentoined it is private by default
+    private :
+    int cls;
+    int mls;
+    public:
+    int ho;
+    char *name;
+    static int tc;       //static keyword -creates  member that  can be accessed without creating object 
+    
+    
+  
+    hero()
+    {
+       cout<<"address of this 2 = "<<this<<endl;
+       name= new char[100];
+
+        cout<<"constructor called"<<endl;
+    }
+    
+    static int ran()
+    {
+        cout<<"hi"<<tc<<endl;
+    }
+   
+
+    
+};
+
+int hero::tc=6;              //datatype_object::(scope)name=value 
+
+
+//static functions == can be called with class names no need to make objects  
+// no this keyword 
+// can access only static member 
+int main() 
+{
+    cout<< hero::tc <<endl; //without creating object
+    
+    cout<<hero::ran()<<endl;
+    
+    
+    
+    hero a;
+    cout<<a.hero::tc <<endl;  //called after creating object 
+    
+    
+    
+    
+    
+
+    
+    
+
+
+    return 0;
+}

@@ -1,0 +1,23 @@
+// Online C compiler to run C program online
+#include <stdio.h>
+
+int back(int n)
+{
+    int y,r;
+    if(n==0)
+    {
+        return 0;
+    }
+    else
+    {
+        r=n%10;
+        n=n/10;
+        printf("%d",r);
+        int y=back(n);
+    }
+}
+int main() 
+{
+    int a=706,u;
+    u=back(a);
+}

@@ -1,0 +1,34 @@
+// Online C compiler to run C program online
+#include <stdio.h>
+
+int swap(int a,int b)
+{
+    int c;
+    c=a;
+    a=b;
+    b=c;
+}
+
+int main() 
+{
+    int i,j,a;
+    int aw[5]={1,4,3,2,5};
+    for(i=1;i<5;i++)
+    //rounds from 1 ----> n-1
+    {
+        for (j=0;j<5-i;j++)
+        {
+            if(aw[j]>aw[j+1])
+            {
+               a=aw[j+1];
+               aw[j+1]=aw[j];
+               aw[j]=a;
+
+            }
+        }
+    }
+    for(i=0;i<5;i++)
+    {
+        printf("%d ",aw[i]);
+    }
+}

@@ -1,0 +1,39 @@
+// Online C++ compiler to run C++ program online
+#include <iostream>
+#include <stack>
+#include <vector>
+using namespace std;
+
+int main() 
+{
+    int arr[4]={2,1,4,3};
+    int n=4;
+    stack<int> s;
+    s.push(-1);
+    
+    vector<int> ans(4);
+    
+    
+    for(int i=n-1;i>=0;i--)
+    {
+        int curr=arr[i];
+        while(s.top()>=curr)
+        {
+            s.pop();
+        }
+        //ans is stack ka top 
+        ans[i]=s.top();
+        s.push(curr);
+    }
+    cout<<ans.at(0)<<endl;
+    //ans.pop();
+    cout<<ans.at(1)<<endl;
+    //ans.pop();
+    cout<<ans.at(2)<<endl;
+    //ans.pop();
+    cout<<ans.at(3)<<endl;
+    //ans.pop();
+    
+   // return ans;
+    
+}

@@ -1,0 +1,22 @@
+#include <stdio.h>
+int main()
+{
+    FILE *t;
+    char name[25];
+    int age;
+    printf("NAME : AGE : ");
+    scanf("%s %d",name,&age);
+
+    int c;
+    t=fopen("sr.txt","a");
+    if(t==NULL)
+    {
+        printf("file is empty");
+    }
+    else
+    {
+        fprintf(t,"%s\t%d",name,age);
+        printf("data written successfully");
+    }
+    fclose(t);
+}

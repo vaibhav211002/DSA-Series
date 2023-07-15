@@ -1,0 +1,72 @@
+// Online C compiler to run C program online
+#include <stdio.h>
+int main() 
+{
+    int m,n,j,k,l;
+    int i=0;
+    printf("enter no. of rows : ");
+    scanf("%d",&n);
+    printf("enter no. of cols : ");
+    scanf("%d",&m);
+    int arr[n][m];
+    int art[n][m];
+    int tr[n][m];
+    printf("enter the values of matrix-1\n");
+    for(i=0;i<n;i++)
+    {
+        for(j=0;j<m;j++)
+        {
+            printf("input [%d][%d] element : ",i+1,j+1);
+            scanf("%d",&k);
+            arr[i][j]=k;
+        }
+    }
+    for(i=0;i<n;i++)
+    {
+        for(j=0;j<m;j++)
+        {
+            k=arr[i][j];
+            printf("%d ",k);
+        }
+        printf("\n");
+    }
+    printf("enter the values of matrix-2\n");
+    for(i=0;i<n;i++)
+    {
+        for(j=0;j<m;j++)
+        {
+            printf("input [%d][%d] element : ",i+1,j+1);
+            scanf("%d",&k);
+            art[i][j]=k;
+        }
+    }
+    for(i=0;i<n;i++)
+    {
+        for(j=0;j<m;j++)
+        {
+            k=art[i][j];
+            printf("%d ",k);
+        }
+        printf("\n");
+    }
+    for(i=0;i<n;i++)
+    {
+        for(j=0;j<m;j++)
+        {
+            k=art[i][j];
+            l=arr[i][j];
+            tr[i][j]=k+l;
+        }
+    }
+    printf("\n");
+    printf("the sum of matrix 1 and matrix 2\n");
+    for(i=0;i<n;i++)
+    {
+        for(j=0;j<m;j++)
+        {
+            k=tr[i][j];
+            printf("%d ",k);
+        }
+        printf("\n");
+    }
+}

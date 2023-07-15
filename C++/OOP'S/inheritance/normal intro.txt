@@ -1,0 +1,55 @@
+// Online C++ compiler to run C++ program online
+#include <iostream>
+using namespace std;
+
+class human {
+    
+    public :
+    int h;
+    int w;
+    int a;
+    
+    public : 
+    int geta()
+    {
+        return this->a;
+    }
+    int setw(int w)
+    {
+        this->w=w;
+    }
+};
+
+
+class male: public human     //inherited property by parent class with help of class child : access modifiers parent class 
+{
+    public:
+    string color;
+    
+    void sleep()
+    {
+        cout<<"msle sleeping"<<endl;
+    }
+};
+
+
+
+
+int main()
+{
+    male object1;
+    
+    //mode of inheritance ----
+    
+    
+    
+    
+    object1.setw(12);
+    object1.a=13;
+    cout<< object1.w << endl;
+    cout<< object1.a << endl;
+
+    
+    object1.sleep();
+
+}

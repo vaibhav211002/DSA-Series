@@ -1,0 +1,27 @@
+// Online C compiler to run C program online
+#include <stdio.h>
+//returning structure variable from a function 
+struct point {
+    int x;
+    int y;
+};
+
+struct point edit(struct point p){
+    (p.x)++;
+    p.y=p.y+5;
+    return p; // since p is returned then the struct point is useda
+}
+void print(struct point p)
+{
+    printf("%d %d\n",p.x,p.y);
+}
+int main() 
+{
+    struct point p1 ={21,23};
+    struct point p2 ={43,65};
+    p1=edit(p1);
+    p2=edit(p2);
+    print(p1);
+    print(p2);
+    return 0;
+}

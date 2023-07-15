@@ -1,0 +1,23 @@
+// Online C compiler to run C program online
+#include <stdio.h>
+void print(int *p)
+{
+    printf("%d",*p);
+}
+void update(int *p)
+{
+    *p++;
+    // pointer p should be updated
+}
+
+int main() 
+{
+    int value =5;
+    int *p=&value;
+    printf("before : %d \n",*p);
+
+    update(p);
+    printf("after :  %d\n",*p);
+
+    //print(p);
+}

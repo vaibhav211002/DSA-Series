@@ -1,0 +1,29 @@
+// Online C++ compiler to run C++ program online
+#include <iostream>
+using namespace std;
+
+//created a global variable
+ int score=15;
+
+void a(int& i)
+{
+    cout<<score<<"in a"<<endl;
+    char ch='a';
+    score++;
+    cout<<i<<endl ; // here ch is loacl variable;
+}
+
+int b(int& i)        
+{
+    cout<<i<<endl; //reference variable is created
+    cout<<score<<"in b"<<endl;
+}
+int main() 
+{
+    int i=5; // here i is local variable 
+    a(i);
+    b(i);
+    cout<<score<<"in main"<<endl;
+
+    return 0;
+}s

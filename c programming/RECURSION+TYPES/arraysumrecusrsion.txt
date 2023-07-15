@@ -1,0 +1,27 @@
+// Online C compiler to run C program online
+#include <stdio.h>
+
+int sum(int arr[],int size) 
+{
+    int s;
+    if(size==0)
+    {
+        return 0;
+    }
+    if(size==1)
+    {
+        return arr[0];
+    }
+    else
+    {
+        s=arr[0]+sum(arr+1,size-1);
+    }
+    return s;
+}
+int main()
+{
+      int arr[5]={1,2,3,4,5};
+      int size=5;
+      int s=sum(arr,size);
+      printf("sum is %d",s);
+}

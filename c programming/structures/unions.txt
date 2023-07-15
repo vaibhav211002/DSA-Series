@@ -1,0 +1,30 @@
+// Online C compiler to run C program online
+#include <stdio.h>
+union abc{
+    int a;
+    char b;
+    double c;
+    float d;
+}var;
+int main() 
+{
+    var.a=65;
+    printf("a=%d\n",var.a);
+    printf("b=%c\n",var.b);
+    //here the memory of int a and char b is shared in  the same opart of the contagious memory block ..
+    // a=65 and b=a
+    /// deciding size of the union
+    printf("size of union is = %d\n",sizeof(union abc));
+    printf("int = %d\n",sizeof(int));
+    printf("character = %d\n",sizeof(char));
+    printf("double = %d\n",sizeof(double));
+    printf("float = %d\n",sizeof(float));
+    // maximus of inputr datatype is taken 
+    //accessing the members of union through pointers by using arroe -->
+    union abc var;
+    var.a=90;
+    union abc *p=&var;
+    printf("%d %c",p->a,p->b);
+
+
+}

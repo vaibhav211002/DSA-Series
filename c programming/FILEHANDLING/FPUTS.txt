@@ -1,0 +1,20 @@
+#include <stdio.h>
+int main()
+{
+    FILE *t;
+    char input[25];
+
+    int c;
+    t=fopen("sr.txt","a");
+    if(t==NULL)
+    {
+        printf("file is empty");
+    }
+    else
+    {
+        printf("enter a string to the file");
+        gets(input);
+        fputs(input,t);
+    }
+    fclose(t);
+}

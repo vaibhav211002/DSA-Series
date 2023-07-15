@@ -1,0 +1,26 @@
+#include <stdio.h>
+void upd(int **ptr2)
+{
+ //  ptr2=ptr2+1; 
+    
+   //*ptr2=*ptr2+1; //the value changes   
+  **ptr2=**ptr2+1;
+}
+int main()
+{
+    int i=5;
+    int *ptr=&i;
+    int **ptr2=&ptr;
+    printf("\n");
+    printf("before \n");
+    printf("before  %d \n ",i);
+    printf("before %d \n",ptr);
+    printf("before %d \n",ptr2);
+    upd(ptr2);
+    printf("after \n");
+    printf("after %d \n",i);
+    printf("after %d \n",ptr);
+    printf("after %d \n",ptr2);
+
+    return 0;
+}

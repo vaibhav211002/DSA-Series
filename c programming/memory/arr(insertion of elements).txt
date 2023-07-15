@@ -1,0 +1,46 @@
+// Online C compiler to run C program online
+#include <iostream>
+using namespace std;
+int getsum(int *arr ,int n)
+{
+    int sum=0;
+    for(int i=0;i<n;i++)
+    {
+        sum+=arr[i];
+    }
+    return sum;
+}
+int main() 
+{
+   /*  char *ch= new char ;
+    printf("%d\n",ch); //prints adress of heap memory block 
+    printf("%d",*ch); //prints value stored in the heal memory block 
+    */
+    /* 701894320
+    0 */
+    
+  /*  int arr= new int[5]; //memory allocated is  8 *{memory of pointer}+ 5*4=20 ==28;
+    */
+    
+    
+    int n;
+    cout<<"enter the size : " <<endl;
+    cin>>n;
+    int *arr=new int[n]; //arr is used *arr pointer because it points in then heap memory of the the memry system
+    for(int i=0;i<n;i++)
+    {
+        cout<<"ENTER THE NO " << i << " : ";
+        cin>> arr[i];
+    }
+    for(int i=0;i<n;i++)
+    {
+        cout<< arr[i] << endl;
+    }
+    int u=getsum(arr,n);
+    cout<<" sum : "<< u<<endl;
+    
+    
+    
+    
+    return 0;
+}

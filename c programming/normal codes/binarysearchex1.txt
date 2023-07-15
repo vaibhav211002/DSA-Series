@@ -1,0 +1,34 @@
+#include <iostream>
+using namespace  std;
+int bs(int ar[],int size,int key)
+{
+    int s=0;
+    int e=size-1;
+    int mid=(s+e)/2; ============================== for crossing range === s+(s+e)/2
+    while(s<=e)
+    {
+        if (ar[mid]==key)
+        {
+            return mid;
+        }
+        if (key>ar[mid])
+        {
+            s=mid+1;
+        }
+        else 
+        {
+            e=mid-1;
+        }
+        mid=(s+e)/2;    ============================== for crossing range === s+(s+e)/2
+    }
+    return -1;
+}
+int main() 
+{
+    int even[6]={2,4,6,8,10,12};
+    int odd[5]={1,3,5,7,9};
+    int index=bs(odd,5,5);
+    cout<<"index"<<index<< endl;
+    return 0;
+}
+ 

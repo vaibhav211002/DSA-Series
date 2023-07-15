@@ -1,0 +1,65 @@
+#include <iostream>
+#include <stack>
+using namespace std;
+
+int main()
+{
+    
+    stack<string> s;
+    s.push("hi");
+    s.push("vaibhav");
+    s.push("bhatt");
+    
+    stack<int> a;
+    
+    a.push(1);
+    a.push(2);
+    a.push(3);
+    s.size();
+    a.size();
+     
+    
+    cout<<"integer top element-> "<<a.top()<<endl;
+
+    cout<<"top element-> "<<s.top()<<endl;
+    
+    cout<<"size int -> "<<a.size()<<endl;
+    cout<<"size string -> "<<s.size()<<endl;
+
+    s.pop();
+    a.pop();
+    cout<<"after pop"<<endl; 
+    cout<<"integer top element-> "<<a.top()<<endl;
+
+    cout<<"top element-> "<<s.top()<<endl;
+    
+     cout<<"size int -> "<<a.size()<<endl;
+    cout<<"size string -> "<<s.size()<<endl;
+    
+    cout<<"empty or not-> "<<s.empty()<<endl;
+    
+    
+    
+    
+    
+//     integer top element-> 3
+// top element-> bhatt
+// size int -> 3
+// size string -> 3
+// after pop
+// integer top element-> 2
+// top element-> vaibhav
+// size int -> 2
+// size string -> 2
+// empty or not-> 0
+
+    
+    
+
+
+  
+
+
+  
+  
+}

@@ -1,0 +1,47 @@
+#include <iostream>
+using namespace std;
+
+inline int getmax(int& a,int& b)
+{
+    return (a>b) ? a:b;
+}
+int main()
+{
+    int a=1,b=2;
+    int ans=0;
+    /*if(a>b)
+    {
+        ans=a;
+    }
+    
+    else
+    {
+        ans=b;
+    }
+    printf("%d",ans); 
+    //this program can aslo be simplified by use of tertiary operator */
+    
+    ans = (a<b) ? a:b ;
+    printf("1st ans : %d\n",ans); 
+    a=a+3;
+    b=b+1;
+    ans = (a>b) ? a:b;
+    printf("2nd ans : %d\n",ans); 
+    
+    // this is repeating many times so we will make a functon 
+    ans=getmax(a,b);
+    printf("1st ans : %d\n",ans); 
+    a=a+3;
+    b=b+1;
+    ans=getmax(a,b);
+    printf("2nd ans : %d",ans); 
+    
+    //now inline is used to make the function ito the line 
+    /* so at the tim_e of compilation the getmax will be replaced by the re_turn value of th function */
+
+
+    
+    
+    
+    return 1;
+}

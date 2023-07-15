@@ -1,0 +1,75 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int min(int *a1,int *a2,int a,int b)
+{
+    int x=*(a1+1);
+    int y=*(a2+1);
+    for(int i=0;i<a;i++)
+    {
+        if(x>*(a1+i))
+        {
+            x=*(a1+i);
+        }
+    }
+    cout<<"minimum element a1 : "<<x<<endl;
+    for(int i=0;i<b;i++)
+    {
+        if(y>*(a2+i))
+        {
+            y=*(a2+i);
+        }
+    }
+    cout<<"minimum element a2 : "<<y<<endl;
+
+}
+
+
+int* concatenate(int *a1,int *a2,int a,int b)
+{
+    int *a3=new int[a+b];
+    int i,j,k=0;
+    for(i=0;i<a;i++)
+    {
+        *(a3+i)=*(a1+i);
+    }
+    for(j=i;j<(a+b);j++)
+    {
+        
+        *(a3+j)=*(a2+k);
+        k++;
+        
+    }
+    return a3;
+}
+int main()
+{
+    int a,b;
+    cout<<"enter size of array 1";
+    cin>>a;
+    cout<<"enter size of array 2";
+    cin>>b;
+
+    int *a1=new int[a];
+    int *a2=new int[b];
+
+
+    for(int i=0;i<a;i++)
+    {
+        cout<<"input "<<i<<" : ";
+        cin>>*(a1+i);
+    }
+    for(int i=0;i<a;i++)
+    {
+        cout<<"input "<<i<<" : ";
+
+        cin>>*(a2+i);
+    }
+    min(a1,a2,a,b);
+    int *y= concatenate(a1,a2,a,b);
+    cout<<"concatenated array : "<<endl;
+    for(int j=0;j<a+b;j++)
+    {
+        cout<<*(y+j)<<" ";
+    }
+}

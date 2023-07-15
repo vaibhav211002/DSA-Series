@@ -1,0 +1,26 @@
+#include <iostream>
+using namespace std;
+
+
+int main() 
+{
+    int i=5;
+    cout<<i<<endl;
+    int &j = i;
+    cout<<i<<endl;
+    i++;
+    cout<<i<<endl;
+    j++;
+    cout<<"new value : "<<j<<endl;
+    cout<<"new value of i  : "<<i<<endl;
+    
+
+    return 0;
+}
+
+/tmp/c5ijvx24A2.o
+5
+5
+6
+new value : 7
+new value of i  : 7

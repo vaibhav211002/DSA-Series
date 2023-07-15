@@ -1,0 +1,17 @@
+// Online C++ compiler to run C++ program online
+#include <iostream>
+using namespace std;
+
+ // macro usage 
+//creating macro 
+#define pi 3.14 
+int main() 
+{
+    int r=5;
+    //double pi
+    int area= pi*r*r;
+    cout<<"area is "<< area<<endl;
+    
+
+    return 0;
+}

@@ -1,0 +1,59 @@
+// Online C++ compiler to run C++ program online
+#include <iostream>
+using namespace std;
+
+
+
+class hero {
+     //public name is used here to define the structure names 
+    //if nothing mentoined it is private by default
+    private :
+    char name;
+    int cls;
+    public:
+    int ho;
+    
+    hero()
+    {
+        cout<<"constructor called"<<endl;
+    }
+    
+    //if private is there then it is not operable under the main class 
+    // private objects can be used under the class only 
+    
+    char getname()
+    {
+        return name;
+    }
+    
+    char setname(char h)
+    {
+        name=h;
+    }
+    
+    int getcls()
+    {
+        return cls;
+    }
+    
+    char setcls(int h)
+    {
+        cls=h;
+    }
+};
+
+
+int main() 
+{
+    cout<<"hi"<<endl;
+    hero ramesh; //object created star=tiscally
+    cout<<"hello"<<endl;
+
+    
+    //for dynamic allocation 
+    hero *b = new hero;
+    
+    // allocation 
+
+    return 0;
+}

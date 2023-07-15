@@ -1,0 +1,37 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+
+int main()
+{
+
+
+    //create queue
+    queue<int> q;
+
+    q.push(11);
+        cout<<"front of queue is " <<q.front()<<endl;
+
+    q.push(12);
+    cout<<"front of queue is " <<q.front()<<endl;
+
+    q.push(13);
+    q.push(14);
+
+    cout<<"front of queue is " <<q.front()<<endl;
+
+    cout<<"size of queue is : "<<q.size()<<endl;
+    q.pop();
+        cout<<"front of queue is " <<q.front()<<endl;
+
+    cout<<"size of queue is : "<<q.size()<<endl;
+        q.pop();
+    q.pop();
+        cout<<"front of queue is " <<q.front()<<endl;
+
+    q.pop();
+    cout<<"size of queue is after removing  : "<<q.size()<<endl;
+    cout<<" queue is empty/not : "<<q.empty()<<endl;
+
+
+}

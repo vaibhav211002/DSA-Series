@@ -1,0 +1,24 @@
+// Online C compiler to run C program online
+#include <stdio.h>
+#include <stdlib.h>
+//array of structure as arguement 
+struct abc{
+    int a;
+    int b;
+};
+
+void print(struct abc ar[])
+{
+    int i;// in the case of array -> arrow operator do not work
+    for(i=0;i<2;i++)
+    {
+        printf("%d %d \n", ar[i].a,ar[i].b);
+    }
+}
+
+int main()
+{
+    struct abc ar[2]={{1,2},{3,4}};
+    print(ar);
+    return 0;
+}

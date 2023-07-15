@@ -1,0 +1,48 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+class base{
+    public:
+    virtual void print()
+    {
+        cout<<"base class \n";
+    }
+
+    virtual void show()
+    {
+        cout<<"show base \n";
+    }
+};
+
+
+class derived : public base{
+    public:
+    void print()
+    {
+        cout<<"print derived\n";
+    }
+
+    void show()
+    {
+        cout<<"show derived\n";
+    }
+};
+
+
+
+int main()
+{
+    base *p;
+    base a;
+    derived d;
+    p=&d;
+    p->print();  //virtual binding --- late binding 
+    a.print();   //virtual function works only on pointer objects not on all.
+    a.show();
+    d.print();
+    d.show();
+
+    p->show();  //non-virtual binding --- early binding
+    
+    return 0;
+}

@@ -1,0 +1,34 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+
+class Test{
+    public:
+    int num1;
+    int num2;
+
+    void sum();
+    void show();
+};
+
+void Test::show()
+{
+    cout<<"num1 : : "<<num1<<endl;
+    cout<<"num2 : : "<<num2<<endl;
+}
+
+void Test::sum()
+{
+    int total;
+    total=num1+num2;
+    cout<<"TOTAL : "<<total<<endl;
+}
+
+int main()
+{
+    Test o1;
+    o1.num1=10;
+    o1.num2=13;
+    o1.sum();
+    o1.show();
+}

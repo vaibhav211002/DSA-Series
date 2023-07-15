@@ -1,0 +1,52 @@
+// Online C compiler to run C program online
+#include <stdio.h>
+
+void swap(char a[],int  c,int d)
+{
+    char t=a[c];
+    a[c]=a[d];
+    a[d]=t;
+}
+void reverse(char a[],int n)
+{
+    int s=0;
+    int e=n-1;
+    while(s<e)
+    {
+        swap(a,s,e);
+        s++;
+        e--;
+    }
+}
+char print(char a[],int  d)
+{
+    int i;
+    for(i=0;i<d;i++)
+    {
+        printf("%c",a[i]);
+    }
+}
+char len(char a[])
+{
+    int i,c=0;
+    for(i=0;a[i]!='\0';i++)
+    {
+        c++;
+    }
+    return c;
+}
+int main() 
+{
+    int i;
+    char a[10];
+    gets(a);
+    int u=len(a);
+    reverse(a,u);
+    //a[3]='\0';
+   /* for(i=0;i<5;i++)
+    {
+        printf("%s ",a[i]);
+    }*/
+    print(a,u);
+    
+}

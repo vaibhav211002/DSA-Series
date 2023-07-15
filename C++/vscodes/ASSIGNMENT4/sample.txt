@@ -1,0 +1,2 @@
+cd "c:\Users\vaibh\OneDrive\Desktop\PROGRAMBIZ\C++\vscodes\ASSIGNMENT4\" ; if ($?) { g++ ques4.cpp -o ques4 } ; if ($?) { .\ques4 }
+cd "c:\Users\vaibh\OneDrive\Desktop\PROGRAMBIZ\C++\vscodes\ASSIGNMENT4\" ; if ($?) { g++ ques4.cpp -o ques4 } ; if ($?) { .\ques4 }

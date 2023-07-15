@@ -1,0 +1,21 @@
+// Online C compiler to run C program online
+#include <stdio.h>
+
+int main() 
+{
+    int ar[5]={1,2,3,4,5};
+    int *p= &ar[0];
+    printf("value of *p : %d \n  ",*p);
+    printf("value of p : %d \n",p);
+    printf("address of ar[0] : %d \n",&ar[0]);
+    printf("value of &p : %d \n ",&p);
+    
+    value of *p : 1 
+      value of p : 1496355568 
+    address of ar[0] : 1496355568 
+    value of &p : 1496355560 
+
+
+
+    
+}

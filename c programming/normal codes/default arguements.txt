@@ -1,0 +1,30 @@
+#include <iostream>
+using namespace std;
+
+void print(int arr[],int n=3,int start=0) //here start and n is made a default parameter
+{
+    for(int i=start;i<n;i++)
+    {
+        cout<<arr[i]<<endl;
+    }
+    cout<<endl;
+}
+int main()
+{
+    int arr[5]={1,2,3,4,5}; //default arguement only start from right side
+    int size =5;
+    print(arr,size);   // mujhe nhi pata 3rd arugment agar naa pass kare koi toh full array print kr dena  which means the arugment is not there so print the whole arugement 
+    print(arr,size,0);
+    print(arr);   
+    print(arr,4,2);
+
+    
+    //default arguement only start from right side 
+    
+
+
+    
+    
+    
+    return 1;
+}
