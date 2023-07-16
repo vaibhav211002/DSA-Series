@@ -71,8 +71,6 @@ int main()
     q.dequeue();
     cout<<endl;
         q.display();
-    
 
-    cout<<":)"<<endl;
 
 }
