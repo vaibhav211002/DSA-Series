@@ -62,8 +62,9 @@ node* getmid(node* head)
             fast=fast->next;
         }
         slow=slow->next;
-        return slow;
+       
     }
+     return slow;
 }
 
 void insertathead(node* &head ,int d)    //& is used so it doees not make any copy of the  data since we want to a original linked list not a copy   
