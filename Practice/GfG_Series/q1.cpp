@@ -1,109 +1,83 @@
-// Given an array of size N containing only 0s, 1s, and 2s; 
-// sort the array in ascending order.
+//{ Driver Code Starts
+#include <bits/stdc++.h>
+using namespace std;
+
+// } Driver Code Ends
+class Solution {
+  public:
+  
+    //dfs function
+    void dfs(unordered_map<int,bool>&visited,int node,vector<int> adj[],vector<int>&ans,queue<int>&q){
+
+        visited[node]=true;
+        
+        q.push(node);
 
 
-#include <iostream>
-#include <queue>
-using namespace std ;
 
-int sortpq(int arr[],int n){
-    priority_queue<int> pq;
-    for (int i = 0; i < n; i++)
-    {
-        pq.push(arr[i]);
+
+        for (auto j : adj[node]){
+            if (!visited[j]){
+                dfs(visited,j,adj,ans,q);
+            }
+            
+        }
+        
+
+        
+
+
     }
-    int i=n;
-    while (!pq.empty())
-    {
-        arr[i-1]=pq.top();
-        pq.pop();
-        i--;
-    }
+  
+  
+  
+    // Function to return a list containing the DFS traversal of the graph.
+    vector<int> dfsOfGraph(int V, vector<int> adj[]) {
+        
+        vector<int> ans;
 
-    for (int i = 0; i < n; i++)
-    {
-        cout<<arr[i]<<" ";
+        unordered_map<int,bool> visited;
+        queue<int> q;
+        //make a adjacency list 
+
+        dfs(visited,0,adj,ans,q);
+        
+        for (int i = 0; i < q.size(); i++)
+        {
+            ans.push_back(q.front());
+
+        }
+        
+        return ans;
+
     }
-    
-    
+};
+
+//{ Driver Code Starts.
+int main() {
+    int tc;
+    cin >> tc;
+    while (tc--) {
+        int V, E;
+        cin >> V >> E;
+
+        vector<int> adj[V];
+
+        for (int i = 0; i < E; i++) {
+            int u, v;
+            cin >> u >> v;
+            adj[u].push_back(v);
+            adj[v].push_back(u);
+        }
+        // string s1;
+        // cin>>s1;
+        Solution obj;
+        vector<int> ans = obj.dfsOfGraph(V, adj);
+        for (int i = 0; i < ans.size(); i++) {
+            cout << ans[i] << " ";
+        }
+        cout << endl;
+    }
+    return 0;
 }
-
-int sort(int a[],int n){
-    int e=n-1;
-    int s=0;
-    int an[5];
-
-
-    for(int i=0;i<n;i++){
-        if(a[i]==0){
-            an[s]=0;
-            s++;
-        }
-
-        if(a[i]==2){
-            an[e]=2;
-            e--;
-        }
-    }
-
-    for ( int i = s; i <=e; i++)
-    {
-        an[i]=1;
-
-    }
-    for (int i = 0; i < n; i++)
-    {
-        a[i]=an[i];
-    }
-}
-
-int sort3(int a[],int n){
-    int one=0;
-    int zero=0;
-    int two=0;
-
-    for (int i = 0; i <n; i++)
-    {
-        if(a[i]==0){
-            zero++;
-        }
-        if(a[i]==1){
-            one++;
-        }
-        if(a[i]==2){
-            two++;
-        }
-    }
-    int i=0;
-    while (zero!=0)
-    {
-        a[i]=0;
-        zero--;
-        i++;
-    }
-    while (one!=0)
-    {
-        a[i]=1;
-        one--;
-        i++;
-    }
-    while (two!=0)
-    {
-        a[i]=2;
-        two--;
-        i++;
-    }
-
-    for (int i = 0; i < n; i++)
-    {
-        cout<<a[i]<<" ";
-    }
-    
-}
-
-int main(){
-    // int arr[3]={};
-    // sortpq(arr,3);
-    int a[5]={0,2,1,2,0};
-    sort3(a,5);
-}
+// } Driver Code Ends
