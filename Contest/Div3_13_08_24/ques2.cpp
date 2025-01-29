@@ -1,5 +1,3 @@
-//https://codeforces.com/problemset/problem/1988/B
-
 #include <bits/stdc++.h>
 using namespace std;
 
@@ -89,60 +87,36 @@ string removeDuplicates(string s, int n) {
         }
         return high;
     }
-
-
-
-
-
 void solve() {
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);
 
-
-    ll  n ;
+    ll n ; 
     cin>>n;
 
-    string s ;
-    cin >> s;
+    vector<int> seat(n+2,-1);
+    vector<int> arr(n);
 
-    ll  count = 0 ;
-    ll count_1 = 0;
-    string ans ="";
+    for(int i = 0 ; i <n;i++){
+        cin>>arr[i];
+    }
 
 
-    for (int i = 0; i < n; i++)
-    {
-        if(s[i]=='0'){
-            count++;
+    for(int i = 0 ; i<n ;i++){
+        int a=arr[i];
+
+        if(seat[a-1]==-1 || seat[a+1]==-1){
+            seat[a]=1;
         }
         else{
-            if(count >0){
-                ans += '0';
-                count = 0;
-            }
-            ans += '1';
+            cout<<"NO"<<endl;
+            return ;
         }
     }
 
-      if(count >0){
-                ans += '0';
-                count = 0;
-      }
-
-    for(auto i : ans){
-        if(i=='1'){
-            count_1++;
-        }
-        else{
-            count++;
-        }
-    }
-    if(count>=count_1){
-        cout<<"No"<<endl;
-    }
-    else{
-        cout<<"Yes"<<endl;
-    }
+    cout<<"Yes"<<endl;
+    return ;
+    
 }
 
 
@@ -151,7 +125,6 @@ int main() {
     cin.tie(NULL);
     ll t;
     cin >> t;
-    
     while (t--) {
         solve();
     }

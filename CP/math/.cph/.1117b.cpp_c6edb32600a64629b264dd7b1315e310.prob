@@ -1,0 +1,1 @@
+{"name":"Local: 1117b","url":"d:\\DSA\\DSA-Series\\CP\\math\\1117b.cpp","tests":[{"id":1725095866081,"input":"3 1000000000 1\n1000000000 987654321 1000000000\n\n\n\n","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\DSA\\DSA-Series\\CP\\math\\1117b.cpp","group":"local","local":true}

@@ -1,0 +1,1 @@
+{"name":"Local: 1409a","url":"d:\\DSA\\DSA-Series\\CP\\math\\1409a.cpp","tests":[{"id":1724848402933,"input":"6\n5 5\n13 42\n18 4\n1337 420\n123456789 1000000000\n100500 9000\n","output":"0\n3\n2\n92\n87654322\n\n"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\DSA\\DSA-Series\\CP\\math\\1409a.cpp","group":"local","local":true}

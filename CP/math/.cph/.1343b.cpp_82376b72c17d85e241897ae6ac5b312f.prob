@@ -1,0 +1,1 @@
+{"name":"Local: 1343b","url":"d:\\DSA\\DSA-Series\\CP\\math\\1343b.cpp","tests":[{"id":1724708606538,"input":"5\n2\n4\n6\n8\n10\n","output":"NO\nYES\n2 4 1 5\nNO\nYES\n2 4 6 8 1 3 5 11\nNO\n"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\DSA\\DSA-Series\\CP\\math\\1343b.cpp","group":"local","local":true}

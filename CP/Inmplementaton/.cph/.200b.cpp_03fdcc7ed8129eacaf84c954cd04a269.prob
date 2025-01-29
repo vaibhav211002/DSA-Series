@@ -1,0 +1,1 @@
+{"name":"Local: 200b","url":"d:\\DSA\\DSA-Series\\CP\\Inmplementaton\\200b.cpp","tests":[{"id":1725707102132,"input":"3\n50 50 100","output":""},{"id":1725707112118,"input":"4\n0 25 50 75","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\DSA\\DSA-Series\\CP\\Inmplementaton\\200b.cpp","group":"local","local":true}

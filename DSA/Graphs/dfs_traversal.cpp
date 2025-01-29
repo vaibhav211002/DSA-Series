@@ -1,81 +1,39 @@
-#include <iostream>
-#include<unordered_map>
-#include<set>
-#include <vector>
-
+#include <bits/stdc++.h>
 using namespace std;
 
-
-
-
-
-
-//making the main dfs function 
-
-void dfs(int node,unordered_map<int,bool>&visited,unordered_map<int,set<int>>&adjList,vector<int>&component){
-
-    component.push_back(node);
-    visited[node]=1;
-
-    for(auto i:adjList[node]){
-        if(!visited[i]){
-            dfs(i,visited,adjList,component);
-        }
-    }
-
-
-
+void addEdge(vector<vector<int>> &adj, int s, int t){
+    adj[s].push_back(t); 
+    adj[t].push_back(s);
 }
 
+void DFSRec(vector<vector<int>> &adj, vector<bool> &visited, int s){
+    visited[s] = true;
 
-int main()
-{
-    unordered_map<int,set<int>> adjList;
-    vector<pair<int ,int>> edges={{0,2},{2,1},{2,4},{1,3},{4,3},{5,6},{5,7},{6,7}};
-    int vertex;
-    cout<<"enter no of vertex : ";
-    cin>>vertex;
+    cout << s << " ";
 
-    //adjset(edges,adjList);
+    for (int i : adj[s])
+        if (visited[i] == false)
+            DFSRec(adj, visited, i);
+}
 
-    vector<vector<int>>ans;
+void DFS(vector<vector<int>> &adj, int s){
+    vector<bool> visited(adj.size(), false);
+    DFSRec(adj, visited, s);
+}
 
-    unordered_map<int,bool> visited;
+int main(){
+    int V = 5; // Number of vertices in the graph
 
+    vector<vector<int>> adj(V);
 
+    vector<vector<int>> edges={{1, 2},{1, 0},{2, 0},{2, 3},{2, 4}};
 
-    //creating adjacency list 
-    for (int  i = 0; i <edges.size(); i++)
-    {
-        int u=edges[i].first;
-        int v=edges[i].second;
-        adjList[u].insert(v);
-        adjList[v].insert(u);
-    }
+    for (auto &e : edges)
+        addEdge(adj, e[0], e[1]);
 
+    int source = 1; 
+    cout << "DFS from source: " << source << endl;
+    DFS(adj, source); 
 
-    for (int i = 0; i <vertex; i++)
-    {
-        if(!visited[i]){
-            vector<int>component;
-            dfs(i,visited,adjList,component);\
-            for(auto i:component){
-                cout<<i<<endl;
-                cout<<endl;
-                
-            }
-            ans.push_back(component);
-        }
-
-    }
-
-
-    for (int i = 0; i < ans.size(); i++) {
-        for (int j = 0; j < ans[i].size(); j++)
-            cout << ans[i][j] << " ";
-        cout << endl;
-    }
-    
-
-    
+    return 0;
 }

@@ -1,12 +1,29 @@
 {
-    // See https://go.microsoft.com/fwlink/?LinkId=733558
-    // for the documentation about the tasks.json format
     "version": "2.0.0",
     "tasks": [
         {
-            "label": "echo",
+            "label": "compile",
             "type": "shell",
-            "command": "echo Hello"
+            "command": "g++",
+            "args": [
+                "-std=c++17",
+                "-o",
+                "${fileBasenameNoExtension}",
+                "${file}"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": false
+            }
+        },
+        {
+            "label": "compile and run",
+            "type": "shell",
+            "command": "g++ -std=c++17 -o \"${fileBasenameNoExtension}\" \"${file}\" && .\\${fileBasenameNoExtension} < input.txt > output.txt",
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
         }
     ]
-}
+  }

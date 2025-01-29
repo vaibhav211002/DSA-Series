@@ -1,0 +1,1 @@
+{"name":"Local: 2008b","url":"d:\\DSA\\DSA-Series\\CP\\Inmplementaton\\2008b.cpp","tests":[{"id":1725218838977,"input":"6\n2\n11\n4\n1111\n9\n111101111\n9\n111111111\n12\n111110011111\n5\n11111\n","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\DSA\\DSA-Series\\CP\\Inmplementaton\\2008b.cpp","group":"local","local":true}
