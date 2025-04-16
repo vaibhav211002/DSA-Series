@@ -1,0 +1,1 @@
+{"name":"Local: 1900a1","url":"d:\\DSA\\DSA-Series\\CP\\cp1\\800\\1900a1.cpp","tests":[{"id":1739911934532,"input":"5\n3\n...\n7\n##....#\n7\n..#.#..\n4\n####\n10\n#...#..#.#\n","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\DSA\\DSA-Series\\CP\\cp1\\800\\1900a1.cpp","group":"local","local":true}
